@@ -1,18 +1,58 @@
 ﻿using System.ComponentModel;
-
+using System.Collections;
 namespace CSStudy;
 
 class Program{
 
 static void Main(string[] args)
 {
-    StackSample();
+    // StackSample();
     // ListSample();
-    QueueSample();
-
+    // QueueSample();
+HashTableSample();
+DicSample();
 }
 
+static void DicSample()
+    {
+        Dictionary<int, string> emp = new Dictionary<int, string>();
+       emp.Add(1001,"Jane");
+        emp.Add(1002,"Tom");
+        emp.Add(1003,"Cindy");
+        string name = emp[1002];   Console.WriteLine(name);
+        Dictionary<string, int> scores = new Dictionary<string, int>();
+        scores.Add("철수",98);
+        scores.Add("영희",95);
+        int score = scores["철수"];
 
+       Hashtable scores_ = new Hashtable();
+        scores_.Add("철수",90); scores_.Add("영희", "95");
+        Console.WriteLine(scores_["철수"]);
+        // int score = (int)scores["철수"];
+
+    string keystring = "영희";
+    if(scores.ContainsKey(keystring)) Console.WriteLine(scores[keystring]);
+    
+    if(scores.ContainsKey("철수")) Console.WriteLine(score);
+        SortedDictionary<int, string> tmap = new SortedDictionary<int, string>();
+        tmap.Add(1001, "Tom");
+        tmap.Add(1013, "John");
+        tmap.Add(1010, "Irina");
+        string name1010 = tmap[1010];
+        foreach(KeyValuePair<int, string> kv in tmap)
+        {
+            Console.WriteLine("{0}:{1}", kv.Key, kv.Value);
+        }
+    }
+static void HashTableSample()
+    {
+        Hashtable ht = new Hashtable();
+        ht.Add("som","pje");
+        ht.Add("irina","Irina SP");
+        ht.Add("Tom","Tom Cr");
+        if(ht.Contains("som")) Console.WriteLine(ht["som"]);
+        else Console.WriteLine("No SOM Data");
+    }
 static void StackSample()
     {
         Stack<int>s = new Stack<int>();
