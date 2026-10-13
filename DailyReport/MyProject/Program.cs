@@ -9,10 +9,63 @@ static void Main(string[] args)
     // StackSample();
     // ListSample();
     // QueueSample();
-HashTableSample();
-DicSample();
+// HashTableSample();
+// DicSample();
+ArraySample2();
 }
 
+
+static int CalculateSum(int[] scoresArray)
+    {
+        int sum = 0;
+        for(int i=0; i<scoresArray.Length; i++)
+        {
+            sum+= scoresArray[i];
+        }
+        return sum;
+    }
+static void ArraySample2()
+    {
+        string[] players = new string[10];
+        // string[] Regions = {"서울","경기","부산"};
+        string[] Regions = new string[3]{"서울","경기","부산"};
+        // Console.WriteLine(players.Length+","+Regions.Length);
+        Console.WriteLine("{0},{1}", players.Length, Regions.Length);
+
+        // string[,] Dept = new string[,]{};
+        string[,] dept = {{"김","경리"},{"이","총무"}};
+        // int[,] dsum = new int[,];
+        int[,] dsum = new int[3,2];
+        dsum[0,0] =0; dsum[0,1]=1; dsum[1,0]=2; dsum[1,1]=3; dsum[2,0] =4; dsum[2,1]=5;
+        // dsum[0,2] =2; 배열 크키 초과
+        // int[,] dsum2 = new int[3,2]{{0,1},{2,3},{3,4}};
+        int[,] dsum2 = {{0,1},{2,3},{3,4}};
+
+        string[,,] cubes; //3차원 배열 선언
+        //가변배열
+        // int[][] a= new int[3][];
+        int[][] a = new int[3][];
+        a[0] = new int[2]; a[0][0] =1; a[0][1] =2;
+        a[1] = new int[3]{1,2,3};
+        a[2] = new int[]{1,2,3,4};
+
+        int total = 0;
+        int[] scores = {80,78,60,90,100};
+        total =  CalculateSum(scores);
+        // for(int i=0; i<scores.length; i++)
+        // {
+        //     total += scores[i];
+        // }
+        // Console.WriteLine("합계: "+ total);
+        // foreach(int item in scores)
+        // {
+        //     total+=item;
+        // }
+
+        Console.WriteLine("합계: {0}", total);
+         
+        
+    }
 static void DicSample()
     {
         Dictionary<int, string> emp = new Dictionary<int, string>();
