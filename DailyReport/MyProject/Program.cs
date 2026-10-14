@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel;
 using System.Collections;
+using System.Text;
 namespace CSStudy;
 
 class Program
@@ -8,7 +9,9 @@ class Program
     static void Main(string[] args)
     {
 
-        CodingGuide();
+
+        StringSample();
+        // CodingGuide();
         // StackSample();
         // ListSample();
         // QueueSample();
@@ -18,12 +21,51 @@ class Program
 
     }
 
-
-    public string Name
+    static void StringSample()
     {
-        get { return this.name; }
-        set { this.Name = value; }
+        string s1 = "C#";
+        string s2 = "Programming";
+
+        String s3 = s1 + " " + s2;
+        //    Console.WriteLine("String: {0} {1}",s1,s2);
+
+        Console.WriteLine($"String:{s1}{s2}");
+        string s3sub = s3.Substring(1, 5);
+        Console.WriteLine("Sub: {0}", s3sub);
+
+        string s = "C# studies";
+        for (int i = 0; i < s.Length; i++)
+        {
+            Console.WriteLine("{0} {1}", i, s[i]);
+        }
+        char[] charArr2 = ['A', 'B', 'C', 'D'];
+        string s34 = new string(charArr2);
+        Console.WriteLine(s34);
+
+        Char c1 = 'A';
+        Char c2 = (char)(c1 + 3);
+        Console.WriteLine(c2);
+
+        StringBuilder sb = new StringBuilder();
+        for (int i = 1; i <= 26; i++)
+        {
+            sb.Append(i.ToString());
+            sb.Append(System.Environment.NewLine);
+        }
+        String s20 = sb.ToString();
+        Console.WriteLine(s20);
+        bool isValid = false;
+        int a = 0, b = 1;
+        if (isValid) a = 2;
+        if (!isValid) b = 2;
+        Console.WriteLine("a: {0}, b: {1}",a,b);
+
     }
+    // public string Name
+    // {
+    //     get { return this.name; }
+    //     set { this.Name = value; }
+    // }
     static void CodingGuide()
     {
         bool condition = false;
@@ -53,7 +95,7 @@ class Program
         switch (category)
         {
             case 0:
-                ArraySample();
+                // ArraySample();
                 break;
 
             case 1:
@@ -90,7 +132,7 @@ class Program
         // int[,] dsum2 = new int[3,2]{{0,1},{2,3},{3,4}};
         int[,] dsum2 = { { 0, 1 }, { 2, 3 }, { 3, 4 } };
 
-        string[,,] cubes; //3차원 배열 선언
+        // string[,,] cubes; //3차원 배열 선언
         //가변배열
         // int[][] a= new int[3][];
         int[][] a = new int[3][];
