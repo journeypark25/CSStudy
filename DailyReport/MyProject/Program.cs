@@ -9,8 +9,8 @@ class Program
     static void Main(string[] args)
     {
 
-
-        StringSample();
+            EnumSample();
+       // StringSample();
         // CodingGuide();
         // StackSample();
         // ListSample();
@@ -20,7 +20,50 @@ class Program
         // ArraySample2();
 
     }
+    enum City
+    {
+        Seoul,
+        Daejeon,
+        Busan = 5,
+        Jeju = 10
+    }
+    public enum Category{
+        Cake,
+        IceCream,
+        Bread
+    }
+    enum EnglishDay
+    {
+        Sunday, Monday, Tuesday, wednesday, Thursday, Friday, Saturday
+    }
 
+    [Flags]
+    enum Border
+    {
+        None = 0, Top =1, Right = 2, Bottom = 4, Left = 8
+    }
+    static void EnumSample()
+    {
+        City myCity; myCity = City.Seoul; 
+        int cityValue = (int)myCity;
+        Console.WriteLine(cityValue);
+        if(myCity == City.Seoul) Console.WriteLine("Welcome To Seoul");
+
+        EnglishDay englishDay = EnglishDay.Thursday;
+        if(englishDay == EnglishDay.Saturday || englishDay == EnglishDay.Sunday)
+        {
+            Console.WriteLine("Play all day..");
+        }
+        Border b = Border.Top | Border.Bottom;
+
+        if ((b & Border.Top) != 0)
+        {
+            if (b.HasFlag(Border.Bottom))
+            {
+                Console.WriteLine(b.ToString());
+            }
+        } 
+    }
     static void StringSample()
     {
         string s1 = "C#";
