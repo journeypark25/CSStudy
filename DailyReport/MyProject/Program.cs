@@ -11,13 +11,22 @@ class Program
 
             EnumSample();
        // StringSample();
-        // CodingGuide();
-        // StackSample();
+        // CodingGuide();v
         // ListSample();
         // QueueSample();
         // HashTableSample();
         // DicSample();
         // ArraySample2();
+
+    }
+
+    static void OperatorSample()
+    {
+        int a= (1+2-3)*(4/5)%6;
+        a+=3;
+        int b =0;
+        
+
 
     }
     enum City
