@@ -8,8 +8,8 @@ class Program
 
     static void Main(string[] args)
     {
-
-            EnumSample();
+            repeatSample();
+            // EnumSample();
        // StringSample();
         // CodingGuide();v
         // ListSample();
@@ -20,6 +20,95 @@ class Program
 
     }
 
+
+static void repeatSample()
+    {
+        for(int i=0; i < 100; i++)
+        {
+            if(i%2==0) continue;
+            //Console.WriteLine(i);
+        string[] array = ["AB","CD","EF"];// new string[]{"AB",'CD","EF"};
+        foreach(string s in array)
+            {
+                Console.WriteLine("string: {0}",s);
+                foreach(char c in s)
+                {
+                    Console.WriteLine("char: {0}", c);                      
+                    
+                }
+
+               } 
+               //foreach(var item in)
+               var dic = new Dictionary<int, char>();
+               dic.Add(3,'a'); dic.Add(5,'z');
+               foreach(var item in dic)
+            {
+                Console.WriteLine("{0} : {1}", item.Key, item.Value);
+            }
+
+            string[,,] arr= new string[,,]
+            {
+                {{"1","2"},{"11","22"},
+                {"3,","4"},{"33","44"}}};
+
+            
+// for(int i1=0; i1 < arr.GetLength(0); i1++)
+//             {
+//                 for(int j=0; j < arr.GetLength(1); j++)
+//                 {
+//                     for(int k=0; k<arr.GetLength(2); k++)
+//                     {
+//                         Console.WriteLine(arr[i1,j,k]);
+//                     }
+//                 }
+//             }
+            
+
+            foreach(var item in arr) Console.WriteLine(item);
+            int i2=1;
+            while (i2 <= 10)
+            {
+                i2++;
+                if(i2<4) continue;
+                Console.WriteLine(i2);
+                if(i2==7) break;
+            }
+            i2=10;
+            while (i2 < 10)
+            {
+                Console.WriteLine(i2); i2++;
+            }
+
+            do
+            {
+                if (i2 > 10)
+                {
+                    Console.WriteLine("맞는 값이 없음");
+                }
+                else
+                {
+                    Console.WriteLine(i2);
+                }
+                i2++;
+            } while (i2 <= 10);
+            var KeyList = new List<char>();
+            ConsoleKeyInfo key;
+            do
+            {
+                key = Console.ReadKey();
+                KeyList.Add(key.KeyChar);
+            }while(key.Key != ConsoleKey.Q);
+            Console.WriteLine();
+            foreach(var item in KeyList)
+            {
+                Console.Write(item);
+            }
+            
+    }
+    
+    
+    
+    }
     static void OperatorSample()
     {
         int a= (1+2-3)*(4/5)%6;
