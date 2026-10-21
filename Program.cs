@@ -8,7 +8,9 @@ class Program
 
     static void Main(string[] args)
     {
-            repeatSample();
+
+        ConstSample();
+            // repeatSample();
             // EnumSample();
        // StringSample();
         // CodingGuide();v
@@ -20,7 +22,13 @@ class Program
 
     }
 
-
+static void ConstSample()
+    {
+        const int CSI = 1;
+        const float PI = 3.1415f;
+        
+        Console.WriteLine(CSI);
+    }
 static void repeatSample()
     {
         for(int i=0; i < 100; i++)
