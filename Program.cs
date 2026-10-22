@@ -1,15 +1,13 @@
-﻿using System.ComponentModel;
+﻿ ﻿using System.ComponentModel;
 using System.Collections;
 using System.Text;
-namespace CSStudy;
-
-class Program
+namespace CSStudy; 
+  class Program
 {
-
-    static void Main(string[] args)
+   static void Main(string[] args)
     {
-
-        ConstSample();
+            TryCatchSample();
+        // ConstSample();
             // repeatSample();
             // EnumSample();
        // StringSample();
@@ -21,7 +19,33 @@ class Program
         // ArraySample2();
 
     }
-
+static void TryCatchSample()
+    {
+        try{//ExceptionSample(0);
+        ExceptionSample(5);}
+        catch(Exception e){Console.WriteLine("예외발생: {0}",e);}
+        catch(IndexOutOfRangeException e)
+        {
+            Console.WriteLine("예외발생: 배열 범위 벗어남");
+            throw e;
+        }
+        catch(Exception e)
+        {
+            Console.WriteLine("예외발생: {0}",e.Message);
+        }
+        finally
+        {
+            Console.WriteLine("무조건 실행");
+        }
+    }
+static void ExceptionSample(int val)
+    {
+        Console.WriteLine("start Sample...");
+        int[] arr = new int[3] {0,1,2};
+        arr[val] = 0;
+        int sum = 100/val;
+        Console.WriteLine("end Sample...");
+    }
 static void ConstSample()
     {
         const int CSI = 1;
@@ -376,5 +400,6 @@ static void repeatSample()
         {
             Console.WriteLine(myList[i]);
         }
+        Console.WriteLine("Hello, World!");
     }
 }
