@@ -2,11 +2,18 @@
 using System.Collections;
 using System.Text;
 namespace CSStudy; 
+using MyClass;
+
   class Program
 {
    static void Main(string[] args)
     {
-            TryCatchSample();
+        MyCustomer mc = new MyCustomer();
+        mc.Name = "박주언";
+        mc.Age = 5;
+        string str = mc.GetCustomerData();
+        Console.WriteLine(str);
+            // TryCatchSample();
         // ConstSample();
             // repeatSample();
             // EnumSample();
