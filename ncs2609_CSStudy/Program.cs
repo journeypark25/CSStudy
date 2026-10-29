@@ -67,6 +67,16 @@ using MyClass;
 //         //     Console.WriteLine("무조건 실행");
 //         // }
 //    // }
+
+
+    static void ArrayLength()
+    {
+        // int[] arr = new int [10]{0,1,2,3,4,5,6,7,8,9};
+        // int[] arr = new int []{0,1,2,3,4,5,6,7,8,9};
+        // int[] arr = new int{0,1,2,3,4,5,6,7,8,9};
+        // int[] arr = [0,1,2,3,4,5,6,7,8,9];
+       
+    }
 static void ExceptionSample(int val)
     {
         Console.WriteLine("start Sample...");
