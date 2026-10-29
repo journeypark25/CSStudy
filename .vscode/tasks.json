@@ -1,0 +1,16 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "dotnet",
+            "task": "build C:\\CSStudy\\ncs2609_CSStudy\\ncs2609_CSStudy.csproj",
+            "file": "C:\\CSStudy\\ncs2609_CSStudy\\ncs2609_CSStudy.csproj",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [],
+            "label": "dotnet: build ncs2609_CSStudy"
+        }
+    ]
+}

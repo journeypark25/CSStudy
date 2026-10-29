@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v10.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v10.0": {
+      "ncs2609_CSStudy/1.0.0": {
+        "runtime": {
+          "ncs2609_CSStudy.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ncs2609_CSStudy/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

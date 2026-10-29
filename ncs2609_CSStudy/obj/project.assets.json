@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\CSStudy\\ncs2609_CSStudy\\MyProject.csproj",
-      "projectName": "MyProject",
-      "projectPath": "c:\\CSStudy\\ncs2609_CSStudy\\MyProject.csproj",
+      "projectUniqueName": "C:\\CSStudy\\ncs2609_CSStudy\\ncs2609_CSStudy.csproj",
+      "projectName": "ncs2609_CSStudy",
+      "projectPath": "C:\\CSStudy\\ncs2609_CSStudy\\ncs2609_CSStudy.csproj",
       "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "c:\\CSStudy\\ncs2609_CSStudy\\obj\\",
+      "outputPath": "C:\\CSStudy\\ncs2609_CSStudy\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

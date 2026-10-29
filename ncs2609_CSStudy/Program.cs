@@ -1,9 +1,12 @@
-﻿ ﻿using System.ComponentModel;
+﻿using System.ComponentModel;
 using System.Collections;
 using System.Text;
-namespace CSStudy; 
-using MyClass;
+namespace CSStudy;
 
+using System.Net;
+using MyClass;
+using MySystem.MySubSystem;
+using MyUtil;
   class Program{
 
 
@@ -12,13 +15,17 @@ using MyClass;
 
         //배열로 생성
         MyCustomer[] mcArr = new MyCustomer[3];
-        mcArr[0] = new MyCustomer();
+        for(int i=0; i<mcArr.Length; i++)
+        {
+            mcArr[i] = new();
+        }
+        mcArr[0] = new();
         mcArr[0].Name = "아무개";
         mcArr[0].Age = 25; mcArr[0].isMen = false;
         mcArr[1] = new MyCustomer("홍길동",20, true);
          mcArr[2] = new MyCustomer("홍길동",20, true);
 
-
+        ArrayLength();
 
 
         /*
@@ -68,13 +75,33 @@ using MyClass;
 //         // }
 //    // }
 
+    static void ClassStudy()
+    {
+        Class2 cs2 = new Class2();
+        cs2.RunClass2();
+        Class2 cs22 = new(0);
+        cs22.RunClass2();
+        Class1 cs11 = new();
+        cs11.Calculate(1,2);
+        List<int> list1 = new List<int>();
+        List<int> list2 = new();
 
+        var cs12 = new Class1();
+    }
     static void ArrayLength()
     {
         // int[] arr = new int [10]{0,1,2,3,4,5,6,7,8,9};
         // int[] arr = new int []{0,1,2,3,4,5,6,7,8,9};
         // int[] arr = new int{0,1,2,3,4,5,6,7,8,9};
-        // int[] arr = [0,1,2,3,4,5,6,7,8,9];
+         int[] arr = [0,1,2,3,4,5,6,7,8,9];
+         int[] arr2 = arr[..^1];
+
+         Util.PrintArray(arr2);
+
+         string str = "Hello World";
+         string s1 = str[..5];
+         Console.WriteLine(s1);
+         var arr3 = Array.Empty<int>();
        
     }
 static void ExceptionSample(int val)
