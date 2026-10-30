@@ -14,6 +14,14 @@
             else Console.Write("]");
         }
  }
+
+  public static void Swap(ref int x, ref int y)
+    {
+        Console.WriteLine($"x = {x}, y={y}");
+        int temp = x;
+        x= y;
+        y = temp;
+    }
  }
  
  

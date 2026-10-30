@@ -4,6 +4,7 @@ using System.Text;
 namespace CSStudy;
 
 using System.Net;
+using System.Security.Cryptography;
 using MyClass;
 using MySystem.MySubSystem;
 using MyUtil;
@@ -13,19 +14,41 @@ using MyUtil;
    static void Main(string[] args)
     {
 
-        //배열로 생성
-        MyCustomer[] mcArr = new MyCustomer[3];
-        for(int i=0; i<mcArr.Length; i++)
-        {
-            mcArr[i] = new();
-        }
-        mcArr[0] = new();
-        mcArr[0].Name = "아무개";
-        mcArr[0].Age = 25; mcArr[0].isMen = false;
-        mcArr[1] = new MyCustomer("홍길동",20, true);
-         mcArr[2] = new MyCustomer("홍길동",20, true);
+        int ret = Calc(10,2,"+");
+// Method1("홍길동",18,95);
+// Method1(name="홍길순",age:19, score:80);
+// Method1(score:30, age:30, name="아무개");
+        // int a= 10;
+        // int b=5;
+        // Swap(ref a,ref b);
+        // Console.WriteLine($"a={a}, b={b}");
+        // //ref 초기화 필요
+        // int x = 1;
+        // double y = 1.0;
+        // double ret = GetData(ref x, ref y);
 
-        ArrayLength();
+        // //out 초기화 불필요
+        // int c,d;
+        // bool bret = GetData(10,20,out c, out d);
+            // Program p = new Program();
+            // Program P = new();
+            // int val = 100;
+            // P.Calculate(val);
+            // Console.WriteLine($"val = {val}");
+
+        //배열로 생성
+        // MyCustomer[] mcArr = new MyCustomer[3];
+        // for(int i=0; i<mcArr.Length; i++)
+        // {
+        //     mcArr[i] = new();
+        // }
+        // mcArr[0] = new();
+        // mcArr[0].Name = "아무개";
+        // mcArr[0].Age = 25; mcArr[0].isMen = false;
+        // mcArr[1] = new MyCustomer("홍길동",20, true);
+        //  mcArr[2] = new MyCustomer("홍길동",20, true);
+
+        // ArrayLength();
 
 
         /*
@@ -54,6 +77,45 @@ using MyUtil;
         // DicSample();
         // ArraySample2();
 
+    }
+
+    static int Calc(int a, int b , string calcType)
+    {
+        switch (calcType)
+        {
+            case "+": return a+b;
+            case "-": return a-b;
+            case "*": return a*b;
+            case "/": return a/b;
+            default: return "default";
+        }
+    }
+    static void Method1(string name,int age, int score )
+    {
+        Console.WriteLine("이름: {0}({1}), {2}", name, age,score);
+        Console.WriteLine($"이름: {name}({age}), {score}");
+    }
+   static void SwapSample()
+    {
+        int a = 10;
+        int b =5;
+        MyUtil.Swap(10,5);
+    }
+    static bool GetData(int a, int b , out int c, out int d)
+    {
+        c = a+b;
+        d= a-b;
+        return true;
+    }
+    static double GetData(ref int a, ref double b)
+    {
+        return ++a*++b;
+    }
+    private void Calculate(int a)
+    {
+        Console.WriteLine("a={0}",a);
+        a*=2;
+        Console.WriteLine("a={0}",a);
     }
 // static void TryCatchSample()
 //     {
