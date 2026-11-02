@@ -14,71 +14,18 @@ using MyUtil;
    static void Main(string[] args)
     {
 
-        int ret = Calc(10,2,"+");
-// Method1("홍길동",18,95);
-// Method1(name="홍길순",age:19, score:80);
-// Method1(score:30, age:30, name="아무개");
-        // int a= 10;
-        // int b=5;
-        // Swap(ref a,ref b);
-        // Console.WriteLine($"a={a}, b={b}");
-        // //ref 초기화 필요
-        // int x = 1;
-        // double y = 1.0;
-        // double ret = GetData(ref x, ref y);
+        MyButton btn = new();
+        btn.click += new EventHandler(btn_click);
+        btn.Text = "Run";
 
-        // //out 초기화 불필요
-        // int c,d;
-        // bool bret = GetData(10,20,out c, out d);
-            // Program p = new Program();
-            // Program P = new();
-            // int val = 100;
-            // P.Calculate(val);
-            // Console.WriteLine($"val = {val}");
-
-        //배열로 생성
-        // MyCustomer[] mcArr = new MyCustomer[3];
-        // for(int i=0; i<mcArr.Length; i++)
-        // {
-        //     mcArr[i] = new();
-        // }
-        // mcArr[0] = new();
-        // mcArr[0].Name = "아무개";
-        // mcArr[0].Age = 25; mcArr[0].isMen = false;
-        // mcArr[1] = new MyCustomer("홍길동",20, true);
-        //  mcArr[2] = new MyCustomer("홍길동",20, true);
-
-        // ArrayLength();
-
-
-        /*
-        MyCustomer mc = new MyCustomer();
-        mc.Name = "박주언";
-        mc.Age = 5;
-        mc.isMen = false;
-        string str = mc.GetCustomerData();
-        Console.WriteLine(str);
-
-        MyCustomer mc2 = new MyCustomer("홍길동",20, true);
-        Console.WriteLine(mc2.GetCustomerData());
-
-        MyCustomer mc3 = new MyCustomer("홍길순",18,false);
-        Console.WriteLine(mc3.GetCustomerData());
-*/
-            // TryCatchSample();
-        // ConstSample();
-            // repeatSample();
-            // EnumSample();
-       // StringSample();
-        // CodingGuide();v
-        // ListSample();
-        // QueueSample();
-        // HashTableSample();
-        // DicSample();
-        // ArraySample2();
+      
 
     }
 
+    static void btn_click(object sender, EventArgs e)
+    {
+        Console.WriteLine("버튼 클릭");
+    }
     static int Calc(int a, int b , string calcType)
     {
         switch (calcType)
@@ -530,4 +477,66 @@ static void repeatSample()
         }
         Console.WriteLine("Hello, World!");
     }
+      // int ret = Calc(10,2,"+");
+// Method1("홍길동",18,95);
+// Method1(name="홍길순",age:19, score:80);
+// Method1(score:30, age:30, name="아무개");
+        // int a= 10;
+        // int b=5;
+        // Swap(ref a,ref b);
+        // Console.WriteLine($"a={a}, b={b}");
+        // //ref 초기화 필요
+        // int x = 1;
+        // double y = 1.0;
+        // double ret = GetData(ref x, ref y);
+
+        // //out 초기화 불필요
+        // int c,d;
+        // bool bret = GetData(10,20,out c, out d);
+            // Program p = new Program();
+            // Program P = new();
+            // int val = 100;
+            // P.Calculate(val);
+            // Console.WriteLine($"val = {val}");
+
+        //배열로 생성
+        // MyCustomer[] mcArr = new MyCustomer[3];
+        // for(int i=0; i<mcArr.Length; i++)
+        // {
+        //     mcArr[i] = new();
+        // }
+        // mcArr[0] = new();
+        // mcArr[0].Name = "아무개";
+        // mcArr[0].Age = 25; mcArr[0].isMen = false;
+        // mcArr[1] = new MyCustomer("홍길동",20, true);
+        //  mcArr[2] = new MyCustomer("홍길동",20, true);
+
+        // ArrayLength();
+
+
+        /*
+        MyCustomer mc = new MyCustomer();
+        mc.Name = "박주언";
+        mc.Age = 5;
+        mc.isMen = false;
+        string str = mc.GetCustomerData();
+        Console.WriteLine(str);
+
+        MyCustomer mc2 = new MyCustomer("홍길동",20, true);
+        Console.WriteLine(mc2.GetCustomerData());
+
+        MyCustomer mc3 = new MyCustomer("홍길순",18,false);
+        Console.WriteLine(mc3.GetCustomerData());
+*/
+            // TryCatchSample();
+        // ConstSample();
+            // repeatSample();
+            // EnumSample();
+       // StringSample();
+        // CodingGuide();v
+        // ListSample();
+        // QueueSample();
+        // HashTableSample();
+        // DicSample();
+        // ArraySample2();
 }
