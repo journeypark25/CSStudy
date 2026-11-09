@@ -1,0 +1,15 @@
+using System.Diagnostics.Contracts;
+
+public static class MyUtility
+{
+    static int ver;
+    static MyUtility(){ver = 1;}
+    public static string Convert(int i)
+    {
+        return string.Empty;
+    }
+    public static int ConvertBack(string s)
+    {
+        return int.Parse(s);
+    }
+}

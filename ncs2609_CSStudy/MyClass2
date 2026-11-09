@@ -1,0 +1,23 @@
+public class MyClass2
+{
+    private int val = 1;
+    public int InstRun() { return val;}//instance
+    public static int Run(){return 1;}// static
+}
+public class Client
+{
+    public void Test()
+    {
+        // 인스턴스 메서도 호출
+        MyClass2 myc = new();
+      int i =  myc.InstRun();
+      myc.val =3;
+
+        // 정적 메서드 호출
+        int j = MyClass2.Run();
+        MyClass2 myc2 = new();
+        int k = myc2.InstRun();
+        myc2.val = 10;
+        int l = MyClass2.Run();
+    }
+}
