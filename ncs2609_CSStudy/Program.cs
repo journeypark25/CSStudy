@@ -13,10 +13,11 @@ using System.Security.Cryptography;
 
    static void Main(string[] args)
     {
-int[] add = [1,2,3];
-string str = MyUtility.Convert(123);
-int i = MyUtility.ConverBack(str);
-WebUtility.PrintAray(arr);
+        new Program().RunSort();
+// int[] add = [1,2,3];
+// string str = MyUtility.Convert(123);
+// int i = MyUtility.ConverBack(str);
+// WebUtility.PrintAray(arr);
 
     //     Scores s = new Scores();
     //     s.Data[0] = 10;
@@ -33,6 +34,29 @@ WebUtility.PrintAray(arr);
 
     }
 
+void RunSort()
+    {
+        int[] a = [5,53,3,7,1];
+        //올림차순으로 정렬
+        Util.CompareDelegate compA = AscendingCompare;
+        Util.Sort(a, compA);
+
+        //내림차순으로 정렬
+        // Util.CompareDelegate comp = DescendingCompare;
+    }
+    //CompareDelegate와 동일한 prototype
+    int AscendingCompare(int i1, int i2)
+    {
+        if(i1 == i2) return 0;
+        return (i2-i1) >0? 1: -1;
+
+    }
+    int DescendingCompare(int i1, int i2)
+    {
+        if(i1 == i2) return 0;
+        return (i1-i2) >0? 1: -1;
+        
+    }
     static void btn_click(object sender, EventArgs e)
     {
         Console.WriteLine("버튼 클릭");

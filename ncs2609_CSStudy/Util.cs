@@ -22,6 +22,25 @@
         x= y;
         y = temp;
     }
+    public delegate int CompareDelegate(int i1, int i2);
+     public static void Sort(int[] arr, CompareDelegate comp)
+    {
+        if(arr.Length<2) return;
+        Console.WriteLine("함수 Prototype:"+ comp.Method);
+        int ret;
+        for(int i=0; i<arr.Length-1; i++)
+        {
+            for(int j=i+1;j<arr.Length; j++)
+            {
+                ret = comp(arr[i], arr[j]);
+                if(ret == -1)
+                {
+                   Swap(ref arr[i], arr[j]);
+                }
+            }
+        }
+        PrintArray(arr);
+    }
  }
  
  

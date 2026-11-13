@@ -1,0 +1,28 @@
+class MyClass3{
+    //delegate 선언
+    private delegate void RunDelegate(int i);
+    void RunThis(int val)
+    {
+        Console.WriteLine("{0}", val);
+    }
+    void RunThat(int value)
+    {
+        Console.WriteLine("0x{0:X}", value);
+    }
+    public void Perform()
+    {
+        //delegate 인스턴스 생성
+        RunDelegate run = new RunDelegate(RunThis);
+        //delegate 실행
+        // run.Invoke(1024);
+        run(1024);
+        // run = new RunDelegate(RunThat);
+        run = RunThat;
+
+    }
+    static void Main(string[] args)
+    {
+        MyClass3 mc = new();
+        mc.Perform();
+    }
+}
