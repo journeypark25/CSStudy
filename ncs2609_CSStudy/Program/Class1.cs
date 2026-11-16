@@ -1,5 +1,5 @@
-namespace MySystem.MySubSystem;
 
+namespace CSStudy;
 public class Class1
 {
     public int Calculate(int a, int b)

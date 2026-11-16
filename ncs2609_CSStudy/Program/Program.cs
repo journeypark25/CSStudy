@@ -10,10 +10,14 @@ using System.Security.Cryptography;
 
   class Program{
 
-
+static MyArea area;
    static void Main(string[] args)
     {
-        new Program().RunSort();
+        area = new MyArea();
+        area.MyClick += Area_Click;
+     
+        area.MyClick = Area_Click;
+        area.ShowDialog();
 // int[] add = [1,2,3];
 // string str = MyUtility.Convert(123);
 // int i = MyUtility.ConverBack(str);
@@ -33,7 +37,10 @@ using System.Security.Cryptography;
       
 
     }
-
+static void Area_Click(object sender)
+    {
+        area.Text = "MyArea 클릭!";
+    }
 void RunSort()
     {
         int[] a = [5,53,3,7,1];
@@ -69,7 +76,7 @@ void RunSort()
             case "-": return a-b;
             case "*": return a*b;
             case "/": return a/b;
-            default: return "default";
+           default: return 0;
         }
     }
     static void Method1(string name,int age, int score )
@@ -81,7 +88,7 @@ void RunSort()
     {
         int a = 10;
         int b =5;
-        MyUtil.Swap(10,5);
+       // MyUtil.Swap(10,5);
     }
     static bool GetData(int a, int b , out int c, out int d)
     {

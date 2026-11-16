@@ -1,0 +1,15 @@
+C:\CSStudy\ncs2609_CSStudy\Program\obj\Debug\net10.0-windows\Program.GeneratedMSBuildEditorConfig.editorconfig
+C:\CSStudy\ncs2609_CSStudy\Program\obj\Debug\net10.0-windows\Program.AssemblyInfoInputs.cache
+C:\CSStudy\ncs2609_CSStudy\Program\obj\Debug\net10.0-windows\Program.AssemblyInfo.cs
+C:\CSStudy\ncs2609_CSStudy\Program\obj\Debug\net10.0-windows\Program.csproj.CoreCompileInputs.cache
+C:\CSStudy\ncs2609_CSStudy\Program\obj\Debug\net10.0-windows\Program.sourcelink.json
+C:\CSStudy\ncs2609_CSStudy\Program\bin\Debug\net10.0-windows\Program.exe
+C:\CSStudy\ncs2609_CSStudy\Program\bin\Debug\net10.0-windows\Program.deps.json
+C:\CSStudy\ncs2609_CSStudy\Program\bin\Debug\net10.0-windows\Program.runtimeconfig.json
+C:\CSStudy\ncs2609_CSStudy\Program\bin\Debug\net10.0-windows\Program.dll
+C:\CSStudy\ncs2609_CSStudy\Program\bin\Debug\net10.0-windows\Program.pdb
+C:\CSStudy\ncs2609_CSStudy\Program\obj\Debug\net10.0-windows\Program.dll
+C:\CSStudy\ncs2609_CSStudy\Program\obj\Debug\net10.0-windows\refint\Program.dll
+C:\CSStudy\ncs2609_CSStudy\Program\obj\Debug\net10.0-windows\Program.pdb
+C:\CSStudy\ncs2609_CSStudy\Program\obj\Debug\net10.0-windows\Program.genruntimeconfig.cache
+C:\CSStudy\ncs2609_CSStudy\Program\obj\Debug\net10.0-windows\ref\Program.dll

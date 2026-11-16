@@ -1,5 +1,5 @@
  
- namespace MyUtil;
+namespace CSStudy;
 
  public class Util{
  public static void PrintArray(int[] answer){
@@ -33,10 +33,10 @@
             for(int j=i+1;j<arr.Length; j++)
             {
                 ret = comp(arr[i], arr[j]);
-                if(ret == -1)
-                {
-                   Swap(ref arr[i], arr[j]);
-                }
+               if(ret == -1)
+{
+    Swap(ref arr[i], ref arr[j]); // ref 추가 완료
+}
             }
         }
         PrintArray(arr);

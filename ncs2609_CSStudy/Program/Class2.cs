@@ -1,5 +1,5 @@
-namespace MySystem.MySubSystem;
 
+namespace CSStudy;
 public class Class2
 {
     public Class2()
