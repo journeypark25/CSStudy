@@ -6,8 +6,19 @@ namespace CSStudy;
 class MyArea: Form
 {
     public Label label = new Label();
+    delegate void MyDelegate(int a);
+    void AnotherTest(int p)
+    {
+        Console.Write(p);
+    }
+    void button1_Click(object sender, EventArgs a)
+    {
+        MessageBox.Show("Button 1 click");
+    }
+    
     public MyArea()
     {
+        
         this.MouseClick += delegate{MyAreaClicked();};
         label.Text ="";
     

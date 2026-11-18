@@ -10,6 +10,7 @@ using System.Security.Cryptography;
 
   class Program{
 
+
 static MyArea area;
    static void Main(string[] args)
     {
@@ -18,24 +19,13 @@ static MyArea area;
      
         area.MyClick = Area_Click;
         area.ShowDialog();
-// int[] add = [1,2,3];
-// string str = MyUtility.Convert(123);
-// int i = MyUtility.ConverBack(str);
-// WebUtility.PrintAray(arr);
 
-    //     Scores s = new Scores();
-    //     s.Data[0] = 10;
-    //     s[0] = 100;
-    //     Console.WriteLine(s.Data[0]);
-    //     Console.WriteLine(s[0]);
-    //     // MyButton btn = new();
-    //     // btn.click += new EventHandler(btn_click);
-    //     // btn.Text = "Run";
-    // Phonebook book = new();
-    // book["철수"] = "010-1234-5678";
-    // Console.WriteLine(book["철수"]);
       
 
+    }
+    static void DelegateSample3()
+    {
+        
     }
 static void Area_Click(object sender)
     {
@@ -581,4 +571,20 @@ static void repeatSample()
         // HashTableSample();
         // DicSample();
         // ArraySample2();
+        // int[] add = [1,2,3];
+// string str = MyUtility.Convert(123);
+// int i = MyUtility.ConverBack(str);
+// WebUtility.PrintAray(arr);
+
+    //     Scores s = new Scores();
+    //     s.Data[0] = 10;
+    //     s[0] = 100;
+    //     Console.WriteLine(s.Data[0]);
+    //     Console.WriteLine(s[0]);
+    //     // MyButton btn = new();
+    //     // btn.click += new EventHandler(btn_click);
+    //     // btn.Text = "Run";
+    // Phonebook book = new();
+    // book["철수"] = "010-1234-5678";
+    // Console.WriteLine(book["철수"]);
 }
