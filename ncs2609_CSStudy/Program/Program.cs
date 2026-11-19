@@ -3,28 +3,49 @@ using System.Collections;
 using System.Text;
 namespace CSStudy;
 
+using System.Globalization;
 using System.Net;
 using System.Security.Cryptography;
 
 
 
-  class Program{
 
-
-static MyArea area;
-   static void Main(string[] args)
+class Program
+{   delegate bool Check(int n);
+        static bool IsEven(int n){return n%2 ==0;}
+    static void Main()
     {
-        area = new MyArea();
-        area.MyClick += Area_Click;
-     
-        area.MyClick = Area_Click;
-        area.ShowDialog();
-
-      
+    Action a = () =>Console.WriteLine("Hi!");
+    Action<string> p =s=> Console.Write(a);
+    p("abc");
+    
 
     }
-    static void DelegateSample3()
+
+
+   static void LambdaSampl3()
     {
+        
+          Check c1 = IsEven;
+        Check c3 = n=> n%2==0;
+        Check c2 = delegate(int n){return n%2==0;};
+        Console.WriteLine(c1(4));
+        Console.WriteLine(c2(5));
+        // 1. 익명 메서드
+        Calc cmin = delegate (int i1, int i2) { return i1 - i2; };
+        Calc cmul = delegate (int i1, int i2) { return i1 * i2; };
+
+        // 2. 델리게이트 호출 후 결과 합산
+        int ia = cmin(10, 3) + cmul(10, 3);
+        Console.WriteLine(ia); // 37
+
+        // 3. 람다 식
+        Calc cmin2 = (int i1, int i2) => { return i1 - i2; };
+        Calc cmul2 = (i, j) => i * j;
+
+        Console.WriteLine(cmin2(10, 3)); // 7
+        Console.WriteLine(cmul2(10, 3)); // 3
+   
         
     }
 static void Area_Click(object sender)
