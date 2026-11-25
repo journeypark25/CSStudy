@@ -15,7 +15,14 @@ class Program
         static bool IsEven(int n){return n%2 ==0;}
     static void Main()
     {
-        var t = new{ Name = "Kim", Age = 20};
+        List<string> list = new List<string>{"Apple", "Grape", "Banana"};
+        IEnumerable<string> q = list.
+                Where(p=>p.StartsWith("A"));
+        var nums = new Sere(p=>p%3==0);
+        List<int. arr = v.ToList();
+        Array.ForEach(nameof=>Console.WriteLine(n));
+
+        // var t = new{ Name = "Kim", Age = 20};
 
     // Action a = () =>Console.WriteLine("Hi!");
     // Action<string> p =s=> Console.Write(a);
@@ -23,6 +30,7 @@ class Program
     
 
     }
+
 
 void RunTest()
     {
